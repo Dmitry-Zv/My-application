@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="homework1">Homework 1</string>
+    <string name="homework2">Homework 2</string>
+    <string name="homework3">Homework 3</string>
+    <string name="enter_url">Please enter image url</string>
+    <string name="buttonLoad">Load image</string>
 </resources>
