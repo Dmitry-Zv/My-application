@@ -5,4 +5,6 @@
     <string name="homework3">Homework 3</string>
     <string name="enter_url">Please enter image url</string>
     <string name="buttonLoad">Load image</string>
+    <string name="flags">Flags</string>
+    <string name="animation">Animation</string>
 </resources>
