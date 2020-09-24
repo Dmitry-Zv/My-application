@@ -14,5 +14,9 @@ class Homework2 : AppCompatActivity() {
             val intent = Intent(this, Flag::class.java)
             startActivity(intent)
         }
+        buttonAnimation.setOnClickListener {
+            val intent = Intent(this, CatAnimation::class.java)
+            startActivity(intent)
+        }
     }
 }
