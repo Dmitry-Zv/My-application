@@ -4,8 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".homework3.Homework3">
-
+    <Button
+        android:id="@+id/button_start_harvesting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/start_harvesting"/>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">

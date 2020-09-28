@@ -17,5 +17,6 @@
     <string name="gomel_region">Gomel Region</string>
     <string name="minsk_region">Minsk Region</string>
     <string name="mogilev_region">Mogilev Region</string>
+    <string name="start_harvesting">Start harvesting</string>
 
 </resources>
