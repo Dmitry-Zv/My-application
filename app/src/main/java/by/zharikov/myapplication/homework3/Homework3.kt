@@ -1,0 +1,12 @@
+package by.zharikov.myapplication.homework3
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import by.zharikov.myapplication.R
+
+class Homework3 : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_homework3)
+    }
+}
