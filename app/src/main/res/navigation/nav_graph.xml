@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="by.zharikov.myapplication.homework4.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/main_fragment_hw4">
+        <action
+            android:id="@+id/showAddSortFragment"
+            app:destination="@id/addSortFragment" />
+        <action
+            android:id="@+id/showCoffeeCollectionFragment"
+            app:destination="@id/coffeeCollectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addSortFragment"
+        android:name="by.zharikov.myapplication.homework4.AddSortFragment"
+        android:label="AddSortFragment"
+        tools:layout="@layout/fragment_add_sort">
+        <action
+            android:id="@+id/action_addSortFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/coffeeCollectionFragment"
+        android:name="by.zharikov.myapplication.homework4.CoffeeCollectionFragment"
+        android:label="CoffeeCollectionFragment"
+        tools:layout="@layout/fragment_coffe_collection">
+        <action
+            android:id="@+id/action_coffeeCollectionFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+</navigation>
