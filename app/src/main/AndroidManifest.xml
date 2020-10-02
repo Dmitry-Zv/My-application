@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".homework2.CatAnimation"></activity>
+        <activity android:name=".homework3.Homework3"></activity>
+        <activity android:name=".homework2.CatAnimation" />
         <activity android:name=".homework2.Flag" />
         <activity android:name=".homework2.Homework2" />
         <activity android:name=".Homework1" />
