@@ -44,8 +44,8 @@ open class CoffeeFragment : Fragment() {
         val getCoffeeList = context as CoffeeFragment.GetCoffeeList
         val coffeeList = getCoffeeList.getCoffeeList()
         for ((count, coffee) in coffeeList.withIndex()) {
-            coffeeIdName[count].text = coffee.name
-            coffeeIdCost[count].text = coffee.price.toString()
+            coffeeIdName[count].text = "Coffee:  ${coffee.name}"
+            coffeeIdCost[count].text = "Price: ${coffee.price.toString()} BYN"
             Picasso.get().load(coffee.imageUrl).into(coffeeIdImage[count])
         }
     }

@@ -26,4 +26,9 @@
     <string name="add_coffee_name">Enter name of coffee</string>
     <string name="coffee_cost">Enter the cost of the coffee</string>
     <string name="add_coffee">Add coffee</string>
+    <string name="error_text">"You should fill in all fields!"</string>
+    <string name="error">"Error"</string>
+    <string name="ok">"Ok"</string>
+    <string name="success">"Success"</string>
+    <string name="success_coffee">"Coffee has been added"</string>
 </resources>

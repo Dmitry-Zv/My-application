@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import by.zharikov.myapplication.R
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.android.synthetic.main.fragment_add_sort.*
 
 class Homework4 : AppCompatActivity(), AddSortFragment.AddCoffee, CoffeeFragment.GetCoffeeList {
@@ -18,17 +19,20 @@ class Homework4 : AppCompatActivity(), AddSortFragment.AddCoffee, CoffeeFragment
     }
 
     override fun addCoffee() {
+
         val coffee = Coffee(
             name = coffee_name_edit_text.text.toString(),
             price = coffee_cost_edit_text.text.toString().toDouble(),
             imageUrl = url_edit_text.text.toString()
         )
         coffeeList.add(counter, coffee )
-        Toast.makeText(
-            this,
-            "${coffee_name_edit_text.text} was added.",
-            Toast.LENGTH_SHORT
-        ).show()
+        MaterialAlertDialogBuilder(this)
+            .setTitle(resources.getString(R.string.success))
+            .setMessage(resources.getString(R.string.success_coffee))
+            .setPositiveButton(resources.getString(R.string.ok)) { dialog, which ->
+                dialog.cancel()
+            }
+            .show()
         counter++
     }
 

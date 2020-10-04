@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FDFDFD">
+    android:background="@drawable/coffee_bg">
 
 
     <ImageView
@@ -16,24 +16,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/coffee_image_view"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
         android:layout_toEndOf="@id/coffee_image_view"
         android:layout_toRightOf="@id/coffee_image_view"
-        android:textSize="30sp" />
+        android:textColor="#6F0781"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/coffee_cost_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/coffee_image_view"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="30dp"
         android:layout_toEndOf="@id/coffee_image_view"
         android:layout_toRightOf="@id/coffee_image_view"
-        android:textSize="30sp" />
+        android:textColor="#6F0781"
+        android:textSize="20sp" />
 
     <ImageView
         android:id="@+id/coffee_image_view2"
@@ -47,24 +49,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/coffee_image_view2"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
         android:layout_toEndOf="@id/coffee_image_view2"
         android:layout_toRightOf="@id/coffee_image_view2"
-        android:textSize="30sp" />
+        android:textColor="#6F0781"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/coffee_cost_text_view2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/coffee_image_view2"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="30dp"
         android:layout_toEndOf="@id/coffee_image_view2"
         android:layout_toRightOf="@id/coffee_image_view2"
-        android:textSize="30sp" />
+        android:textColor="#6F0781"
+        android:textSize="20sp" />
 
     <ImageView
         android:id="@+id/coffee_image_view3"
@@ -78,23 +82,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/coffee_image_view3"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
         android:layout_toEndOf="@id/coffee_image_view3"
         android:layout_toRightOf="@id/coffee_image_view3"
-        android:textSize="30sp" />
+        android:textColor="#6F0781"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/coffee_cost_text_view3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/coffee_image_view3"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="30dp"
         android:layout_toEndOf="@id/coffee_image_view3"
         android:layout_toRightOf="@id/coffee_image_view3"
-        android:textSize="30sp" />
+        android:textColor="#6F0781"
+        android:textSize="20sp" />
 
 </RelativeLayout>
