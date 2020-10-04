@@ -21,6 +21,9 @@
     <string name="minsk_region">Minsk Region</string>
     <string name="mogilev_region">Mogilev Region</string>
     <string name="start_harvesting">Start harvesting</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
     <string name="add_sort">Add sort</string>
     <string name="coffee_list">Coffee list</string>
     <string name="add_coffee_name">Enter name of coffee</string>
