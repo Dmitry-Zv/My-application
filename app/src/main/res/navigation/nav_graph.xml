@@ -13,9 +13,10 @@
         <action
             android:id="@+id/showAddSortFragment"
             app:destination="@id/addSortFragment" />
+
         <action
-            android:id="@+id/showCoffeeCollectionFragment"
-            app:destination="@id/coffeeCollectionFragment" />
+            android:id="@+id/showCoffeeFragment"
+            app:destination="@id/coffeeFragment" />
     </fragment>
     <fragment
         android:id="@+id/addSortFragment"
@@ -26,13 +27,14 @@
             android:id="@+id/action_addSortFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
     </fragment>
+
     <fragment
-        android:id="@+id/coffeeCollectionFragment"
-        android:name="by.zharikov.myapplication.homework4.CoffeeCollectionFragment"
-        android:label="CoffeeCollectionFragment"
-        tools:layout="@layout/fragment_coffe_collection">
+        android:id="@+id/coffeeFragment"
+        android:name="by.zharikov.myapplication.homework4.CoffeeFragment"
+        android:label="CoffeeFragment"
+        tools:layout="@layout/fragment_coffee">
         <action
-            android:id="@+id/action_coffeeCollectionFragment_to_mainFragment"
+            android:id="@+id/action_coffeeFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
     </fragment>
 </navigation>

@@ -25,9 +25,16 @@ class AddSortFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         button_add.setOnClickListener {
+            if (coffee_name_edit_text.text.isNullOrEmpty() or coffee_cost_edit_text.text.isNullOrEmpty() or url_edit_text.text.isNullOrEmpty()) {
+                Toast.makeText(context, "You should fill in all fields!", Toast.LENGTH_SHORT).show()
+            } else {
 
-            val addCoffee = context as AddCoffee
-            addCoffee.addCoffee()
+                val addCoffee = context as AddCoffee
+                addCoffee.addCoffee()
+                coffee_name_edit_text.text.clear()
+                coffee_cost_edit_text.text.clear()
+                url_edit_text.text.clear()
+            }
         }
     }
 }

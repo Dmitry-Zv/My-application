@@ -6,7 +6,7 @@ import android.widget.Toast
 import by.zharikov.myapplication.R
 import kotlinx.android.synthetic.main.fragment_add_sort.*
 
-class Homework4 : AppCompatActivity(), AddSortFragment.AddCoffee, CoffeeCollectionFragment.GetCoffeeList {
+class Homework4 : AppCompatActivity(), AddSortFragment.AddCoffee, CoffeeFragment.GetCoffeeList {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_homework4)

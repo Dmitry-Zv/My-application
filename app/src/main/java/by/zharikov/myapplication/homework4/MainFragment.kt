@@ -27,7 +27,7 @@ class MainFragment : Fragment() {
         }
         coffee_list_button.setOnClickListener {
             val nav = findNavController()
-            nav.navigate(R.id.showCoffeeCollectionFragment)
+            nav.navigate(R.id.showCoffeeFragment)
         }
     }
 }
