@@ -11,6 +11,6 @@ class HomePage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_page)
         val name = intent.getStringExtra(NAME_KEY)
-        text_view_hp.text = "Welcome $name!"
+        text_view_hp.text = "${resources.getString(R.string.welcome)} $name!"
     }
 }

@@ -27,11 +27,18 @@ class Homework5 : AppCompatActivity() {
             }
         }
         edit_text_password_hw5.addTextChangedListener {
-            if (it.isNullOrEmpty() || it.length < 8) {
-                text_field2_hw5.isErrorEnabled = true
-                text_field2_hw5.error = "Password must be at least 8 characters!"
-            } else{
-                text_field2_hw5.error = null
+            when {
+                it.isNullOrEmpty() -> {
+                    text_field2_hw5.isErrorEnabled = true
+                    text_field2_hw5.error = "The field password must be not empty!"
+                }
+                it.length < 8 -> {
+                    text_field2_hw5.isErrorEnabled = true
+                    text_field2_hw5.error = "Password must be at least 8 characters!"
+                }
+                else -> {
+                    text_field2_hw5.error = null
+                }
             }
         }
         button_register.setOnClickListener {
