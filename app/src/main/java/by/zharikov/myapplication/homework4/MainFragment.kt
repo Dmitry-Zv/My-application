@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import by.zharikov.myapplication.R
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.main_fragment_hw4.*
 
 class MainFragment : Fragment() {
@@ -21,12 +20,11 @@ class MainFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        val nav = findNavController()
         add_sort_button.setOnClickListener {
-            val nav = findNavController()
             nav.navigate(R.id.showAddSortFragment)
         }
         coffee_list_button.setOnClickListener {
-            val nav = findNavController()
             nav.navigate(R.id.showCoffeeFragment)
         }
     }

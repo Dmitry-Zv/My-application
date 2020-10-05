@@ -2,7 +2,6 @@ package by.zharikov.myapplication.homework4
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import by.zharikov.myapplication.R
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.android.synthetic.main.fragment_add_sort.*
