@@ -44,9 +44,9 @@ class Homework5 : AppCompatActivity() {
         button_register.setOnClickListener {
             if (edit_text_name_hw5.text.isNullOrEmpty() or edit_text_password_hw5.text.isNullOrEmpty()) {
                 MaterialAlertDialogBuilder(this)
-                    .setTitle("Error")
-                    .setMessage("All fields must be filled!")
-                    .setPositiveButton("Ok") { dialog, which ->
+                    .setTitle(resources.getString(R.string.error))
+                    .setMessage(resources.getString(R.string.error_text))
+                    .setPositiveButton(resources.getString(R.string.ok)) { dialog, which ->
                         dialog.cancel()
                     }
                     .show()
@@ -57,12 +57,12 @@ class Homework5 : AppCompatActivity() {
                 intent.putExtra(PASSWORD_KEY, myPerson.password)
                 MaterialAlertDialogBuilder(this)
                     .setIcon(resources.getDrawable(R.drawable.login, theme))
-                    .setTitle("Success")
-                    .setMessage("You are register!")
-                    .setNeutralButton("Ok") { dialog, which ->
+                    .setTitle(resources.getString(R.string.success))
+                    .setMessage(resources.getString(R.string.success_register))
+                    .setNeutralButton(resources.getString(R.string.ok)) { dialog, which ->
                         dialog.cancel()
                     }
-                    .setPositiveButton("Come in"){dialog, which ->
+                    .setPositiveButton(resources.getString(R.string.come_in)){dialog, which ->
                         startActivity(intent)
                         edit_text_name_hw5.text?.clear()
                         edit_text_password_hw5.text?.clear()

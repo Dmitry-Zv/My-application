@@ -35,4 +35,6 @@
     <string name="ok">"Ok"</string>
     <string name="success">"Success"</string>
     <string name="success_coffee">"Coffee has been added"</string>
+    <string name="success_register">"You are register!"</string>
+    <string name="come_in">"Come in"</string>
 </resources>
