@@ -3,26 +3,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/mother_day"
+        android:scaleType="centerCrop"/>
     <TextView
-        android:id="@+id/mother_day_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
-        android:textSize="36sp"
+        android:layout_margin="16dp"
+        android:textSize="50sp"
+        android:textStyle="italic|bold"
+        android:textColor="#97150C"
         android:text="@string/happy_mother_s_day"
-        android:layout_marginTop="100dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:gravity="center"
-        android:textStyle="italic|bold"/>
+        android:gravity="center"/>
     <Button
         android:id="@+id/open_postcard_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/mother_day_text_view"
         app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="48dp"
         android:layout_marginStart="48dp"
         android:layout_marginEnd="48dp"
-        android:text="@string/open_a_postcard"
-        android:textSize="30sp"/>
+        android:textSize="30sp"
+        android:backgroundTint="#2A42594D"
+        android:textStyle="bold|italic"
+        style="?attr/materialButtonOutlinedStyle"
+        android:textColor="#97150C"
+        android:text="@string/open_a_postcard"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

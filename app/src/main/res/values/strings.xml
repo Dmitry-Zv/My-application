@@ -32,11 +32,16 @@
     <string name="add_coffee">Add coffee</string>
     <string name="error_text">"You should fill in all fields!"</string>
     <string name="error">"Error"</string>
-    <string name="ok">"Ok"</string>
+    <string name="ok">"OK"</string>
     <string name="success">"Success"</string>
     <string name="success_coffee">"Coffee has been added"</string>
     <string name="success_register">"You are register!"</string>
     <string name="come_in">"Come in"</string>
-    <string name="happy_mother_s_day">Happy Mother\'s Day</string>
+    <string name="happy_mother_s_day">Happy Mother`s Day</string>
     <string name="open_a_postcard">Open a postcard</string>
+    <string name="mother_message1">Who care for us and guide us. You can feel their love and gentleness as they walk through life beside us.</string>
+    <string name="mother_message2">The do great things for us every day they whisper in our ears, they evn hold us in their hearts when we are filled with all our fear.</string>
+    <string name="mother_message3">They are always there to give a hug and try to make us smile. They threat us with respect and love, they treat us like their child.</string>
+    <string name="mother_message4">God blessed me with an Angel, I am proud to call my own. She is been with me throughout my life, been with me as I have grown.</string>
+    <string name="mother_message5">She is guided me the best she can, she is taught me like no other, and I am thankful I am the lucky one who get is to call her…</string>
 </resources>
