@@ -37,4 +37,6 @@
     <string name="success_coffee">"Coffee has been added"</string>
     <string name="success_register">"You are register!"</string>
     <string name="come_in">"Come in"</string>
+    <string name="happy_mother_s_day">Happy Mother\'s Day</string>
+    <string name="open_a_postcard">Open a postcard</string>
 </resources>

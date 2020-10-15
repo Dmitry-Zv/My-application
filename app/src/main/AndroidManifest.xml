@@ -11,12 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".homework5.HomePage"></activity>
+        <activity android:name=".homework6.Homework6"></activity>
+        <activity android:name=".homework5.HomePage" />
         <activity android:name=".homework5.Homework5" />
         <activity android:name=".homework3.Homework3" />
         <activity android:name=".homework2.CatAnimation" />
         <activity android:name=".homework2.Flag" />
-        <activity android:name=".homework4.Homework4"/>
+        <activity android:name=".homework4.Homework4" />
         <activity android:name=".homework2.Homework2" />
         <activity android:name=".Homework1" />
         <activity android:name=".MainActivity">
