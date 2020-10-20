@@ -44,4 +44,17 @@
     <string name="mother_message3">They are always there to give a hug and try to make us smile. They threat us with respect and love, they treat us like their child.</string>
     <string name="mother_message4">God blessed me with an Angel, I am proud to call my own. She is been with me throughout my life, been with me as I have grown.</string>
     <string name="mother_message5">She is guided me the best she can, she is taught me like no other, and I am thankful I am the lucky one who get is to call her…</string>
+    <string name="homework_7">Homework 7</string>
+    <string name="homework_8">Homework 8</string>
+    <string name="homework_9">Homework 9</string>
+    <string name="enter_brand_of_car">Enter brand of car</string>
+    <string name="enter_max_speed_of_car">Enter max speed of car</string>
+    <string name="enter_fuel_consumption">Enter fuel consumption</string>
+    <string name="show_data_base">Show data base</string>
+    <string name="add_to_database">Add to database</string>
+    <string name="delete_database">Delete database</string>
+    <string name="db_delete_message">The database has been deleted</string>
+    <string name="db_add">The database has been added</string>
+    <string name="enter_car">Enter car</string>
+
 </resources>

@@ -8,6 +8,7 @@ import by.zharikov.myapplication.homework3.Homework3
 import by.zharikov.myapplication.homework4.Homework4
 import by.zharikov.myapplication.homework5.Homework5
 import by.zharikov.myapplication.homework6.Homework6
+import by.zharikov.myapplication.homework7.Homework7
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -36,6 +37,10 @@ class MainActivity : AppCompatActivity() {
         }
         button6.setOnClickListener {
             val intent = Intent(this, Homework6::class.java)
+            startActivity(intent)
+        }
+        button7.setOnClickListener {
+            val intent = Intent(this, Homework7::class.java)
             startActivity(intent)
         }
     }
