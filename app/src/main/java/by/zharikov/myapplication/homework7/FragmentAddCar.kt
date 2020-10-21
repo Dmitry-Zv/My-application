@@ -32,19 +32,31 @@ class FragmentAddCar : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val db = context?.let { Db.getDb(it).carDao() }
         button_add_to_database.setOnClickListener {
-            val brand = edit_text_brand.text.toString()
-            val speed = edit_text_max_speed.text.toString().toDouble()
-            val fuelConsumption = edit_text_fuel_consumption.text.toString().toDouble()
-            val car = Car(brand, speed, fuelConsumption)
-            launchIO {
-                db?.addCar(car)
-                launchUI {
-                    context?.let { it1 -> MaterialAlertDialogBuilder(it1)
-                        .setTitle(resources.getString(R.string.success))
-                        .setMessage(resources.getString(R.string.db_add))
+            if (edit_text_brand.text.isNullOrEmpty() or  edit_text_max_speed.text.isNullOrEmpty() or  edit_text_fuel_consumption.text.isNullOrEmpty()) {
+                context?.let { it1 ->
+                    MaterialAlertDialogBuilder(it1)
+                        .setTitle(resources.getString(R.string.error))
+                        .setMessage(resources.getString(R.string.error_text))
                         .setNeutralButton(resources.getString(R.string.ok)) { dialog, which ->
                             dialog.cancel()
                         }.show()
+                }
+            } else {
+                val brand = edit_text_brand.text.toString()
+                val speed = edit_text_max_speed.text.toString().toDouble()
+                val fuelConsumption = edit_text_fuel_consumption.text.toString().toDouble()
+                val car = Car(brand, speed, fuelConsumption)
+                launchIO {
+                    db?.addCar(car)
+                    launchUI {
+                        context?.let { it1 ->
+                            MaterialAlertDialogBuilder(it1)
+                                .setTitle(resources.getString(R.string.success))
+                                .setMessage(resources.getString(R.string.db_add))
+                                .setNeutralButton(resources.getString(R.string.ok)) { dialog, which ->
+                                    dialog.cancel()
+                                }.show()
+                        }
                     }
                 }
             }
@@ -53,18 +65,19 @@ class FragmentAddCar : Fragment() {
             edit_text_fuel_consumption.text?.clear()
         }
         button_show_database.setOnClickListener {
-           findNavController().navigate(R.id.showFragmentShowCars)
+            findNavController().navigate(R.id.showFragmentShowCars)
         }
         button_delete_database.setOnClickListener {
             launchIO {
                 db?.deleteAllCars()
                 launchUI {
-                    context?.let { it1 -> MaterialAlertDialogBuilder(it1)
-                        .setTitle(resources.getString(R.string.success))
-                        .setMessage(resources.getString(R.string.db_delete_message))
-                        .setNeutralButton(resources.getString(R.string.ok)) { dialog, which ->
-                            dialog.cancel()
-                        }.show()
+                    context?.let { it1 ->
+                        MaterialAlertDialogBuilder(it1)
+                            .setTitle(resources.getString(R.string.success))
+                            .setMessage(resources.getString(R.string.db_delete_message))
+                            .setNeutralButton(resources.getString(R.string.ok)) { dialog, which ->
+                                dialog.cancel()
+                            }.show()
                     }
                 }
             }
