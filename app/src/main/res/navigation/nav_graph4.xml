@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph4"
+    app:startDestination="@id/fragmentAPI">
+
+    <fragment
+        android:id="@+id/fragmentAPI"
+        android:name="by.zharikov.myapplication.homework8.FragmentAPI"
+        android:label="FragmentAPI"
+        tools:layout="@layout/api_fragment">
+        <action
+            android:id="@+id/showFragmentCryptocurrency"
+            app:destination="@id/fragmentCryptocurrency" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentCryptocurrency"
+        android:name="by.zharikov.myapplication.homework8.FragmentCryptoCurrency"
+        android:label="FragmentCryptocurrency"
+        tools:layout="@layout/recycle_crypto_fragment"/>
+
+</navigation>
