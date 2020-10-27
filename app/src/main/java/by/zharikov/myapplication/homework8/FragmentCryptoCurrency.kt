@@ -33,7 +33,6 @@ class FragmentCryptoCurrency : Fragment() {
         CoroutineScope(Dispatchers.IO).launch {
             val response = retrofit.getCryptoCurrency().await()
             if (response.isSuccessful) {
-                val cryptoCurrencyResponse = response.body()
                 val cryptoCurrency = response.body()?.data?.map {
                     CryptoCurrencyMapper().convert(it)
                 }
