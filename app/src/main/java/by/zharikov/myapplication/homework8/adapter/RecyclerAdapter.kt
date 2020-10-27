@@ -18,7 +18,8 @@ class RecyclerAdapter(private val cryptoCurrency: List<CryptoCurrency>) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CryptoCurrencyViewHolder {
         val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.item_crypto_currency, parent, false)
+            LayoutInflater.from(parent.context)
+                .inflate(R.layout.item_crypto_currency, parent, false)
         return CryptoCurrencyViewHolder(view)
     }
 
@@ -27,10 +28,10 @@ class RecyclerAdapter(private val cryptoCurrency: List<CryptoCurrency>) :
 
     override fun onBindViewHolder(holder: CryptoCurrencyViewHolder, position: Int) {
         holder.itemView.item_crypto_name.text = cryptoCurrency[position].cryptoCurrencyName
-        holder.itemView.item_crypto_price.text =
-            cryptoCurrency[position].priceCryptoCurrency.toString() + "$"
+        holder.itemView.item_crypto_price.text = cryptoCurrency[position].priceCryptoCurrency.toString() + " $"
+
         holder.itemView.item_percent_change.text =
-            cryptoCurrency[position].percentChange.toString() + "%"
+            cryptoCurrency[position].percentChange.toString() + " %"
         Picasso.get().load(URL_IMAGE + "${cryptoCurrency[position].id}.png")
             .into(holder.itemView.image_crypto_currency)
     }

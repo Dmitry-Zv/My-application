@@ -60,5 +60,6 @@
     <string name="crypto_currency">Cryptocurrency</string>
     <string name="percent">%</string>
     <string name="dollar">$</string>
+    <string name="error_response">Error response</string>
 
 </resources>

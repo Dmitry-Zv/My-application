@@ -10,13 +10,14 @@ import by.zharikov.myapplication.R
 import by.zharikov.myapplication.homework8.adapter.RecyclerAdapter
 import by.zharikov.myapplication.homework8.mapper.CryptoCurrencyMapper
 import by.zharikov.myapplication.homework8.retrofit.RetrofitFactory
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.android.synthetic.main.recycle_crypto_fragment.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class FragmentCryptoCurrency :Fragment() {
+class FragmentCryptoCurrency : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -31,17 +32,26 @@ class FragmentCryptoCurrency :Fragment() {
         val retrofit = RetrofitFactory.getRetrofit()
         CoroutineScope(Dispatchers.IO).launch {
             val response = retrofit.getCryptoCurrency().await()
-            if (response.isSuccessful){
+            if (response.isSuccessful) {
                 val cryptoCurrencyResponse = response.body()
                 val cryptoCurrency = response.body()?.data?.map {
                     CryptoCurrencyMapper().convert(it)
                 }
-                withContext(Dispatchers.Main){
+                withContext(Dispatchers.Main) {
                     val adapter = RecyclerAdapter(cryptoCurrency ?: listOf())
                     recycler_crypto_currency.adapter = adapter
                     recycler_crypto_currency.layoutManager = LinearLayoutManager(context)
                     progress_bar.visibility = View.GONE
                     recycler_crypto_currency.visibility = View.VISIBLE
+                }
+            } else {
+                withContext(Dispatchers.Main) {
+                    MaterialAlertDialogBuilder(this@FragmentCryptoCurrency.requireContext())
+                        .setTitle(resources.getString(R.string.error))
+                        .setMessage(resources.getString(R.string.error_response))
+                        .setNeutralButton(resources.getString(R.string.ok)) { dialog, which ->
+                            dialog.cancel()
+                        }.show()
                 }
             }
 
