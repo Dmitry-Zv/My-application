@@ -3,8 +3,10 @@ package by.zharikov.myapplication.homework8.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat.getColor
 import androidx.recyclerview.widget.RecyclerView
 import by.zharikov.myapplication.R
+import by.zharikov.myapplication.R.*
 import by.zharikov.myapplication.homework8.entity.CryptoCurrency
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_crypto_currency.view.*
@@ -19,7 +21,7 @@ class RecyclerAdapter(private val cryptoCurrency: List<CryptoCurrency>) :
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CryptoCurrencyViewHolder {
         val view =
             LayoutInflater.from(parent.context)
-                .inflate(R.layout.item_crypto_currency, parent, false)
+                .inflate(layout.item_crypto_currency, parent, false)
         return CryptoCurrencyViewHolder(view)
     }
 
@@ -29,9 +31,14 @@ class RecyclerAdapter(private val cryptoCurrency: List<CryptoCurrency>) :
     override fun onBindViewHolder(holder: CryptoCurrencyViewHolder, position: Int) {
         holder.itemView.item_crypto_name.text = cryptoCurrency[position].cryptoCurrencyName
         holder.itemView.item_crypto_price.text = cryptoCurrency[position].priceCryptoCurrency.toString() + " $"
-
         holder.itemView.item_percent_change.text =
             cryptoCurrency[position].percentChange.toString() + " %"
+        if(cryptoCurrency[position].percentChange < 0){
+            holder.itemView.item_percent_change.setTextColor(getColor(holder.itemView.context, R.color.red))
+        } else {
+            holder.itemView.item_percent_change.setTextColor(getColor(holder.itemView.context, R.color.green))
+        }
+
         Picasso.get().load(URL_IMAGE + "${cryptoCurrency[position].id}.png")
             .into(holder.itemView.image_crypto_currency)
     }
