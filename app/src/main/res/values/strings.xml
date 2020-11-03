@@ -56,5 +56,10 @@
     <string name="db_delete_message">The database has been deleted</string>
     <string name="db_add">The database has been added</string>
     <string name="enter_car">Enter car</string>
+    <string name="get_crypto_currency">Get cryptocurrency</string>
+    <string name="crypto_currency">Cryptocurrency</string>
+    <string name="percent">%</string>
+    <string name="dollar">$</string>
+    <string name="error_response">Error response</string>
 
 </resources>
