@@ -3,6 +3,7 @@ package by.zharikov.myapplication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import by.zharikov.myapplication.homework2.Homework2
 import by.zharikov.myapplication.homework3.Homework3
 import by.zharikov.myapplication.homework4.Homework4
@@ -10,6 +11,7 @@ import by.zharikov.myapplication.homework5.Homework5
 import by.zharikov.myapplication.homework6.Homework6
 import by.zharikov.myapplication.homework7.Homework7
 import by.zharikov.myapplication.homework8.Homework8
+import by.zharikov.myapplication.homework9.Homework9
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -46,6 +48,11 @@ class MainActivity : AppCompatActivity() {
         }
         button8.setOnClickListener {
             val intent = Intent(this, Homework8::class.java)
+            startActivity(intent)
+        }
+        val but9 = findViewById<Button>(R.id.button9)
+        but9.setOnClickListener {
+            val intent = Intent(this,Homework9::class.java)
             startActivity(intent)
         }
     }

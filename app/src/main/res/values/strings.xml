@@ -61,5 +61,7 @@
     <string name="percent">%</string>
     <string name="dollar">$</string>
     <string name="error_response">Error response</string>
+    <string name="start">Start</string>
+    <string name="stop">stop</string>
 
 </resources>
