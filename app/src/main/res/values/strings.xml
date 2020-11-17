@@ -61,5 +61,10 @@
     <string name="percent">%</string>
     <string name="dollar">$</string>
     <string name="error_response">Error response</string>
+    <string name="homework_10">Homework 10</string>
+    <string name="homework_11">Homework 11</string>
+    <string name="homework_12">Homework 12</string>
+    <string name="green">#00ff7f</string>
+    <string name="red">#744e3b</string>
 
 </resources>
