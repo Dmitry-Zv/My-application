@@ -3,6 +3,8 @@ package by.zharikov.myapplication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import by.zharikov.myapplication.homework11.Homework11
+import by.zharikov.myapplication.homework12.Homework12
 import by.zharikov.myapplication.homework2.Homework2
 import by.zharikov.myapplication.homework3.Homework3
 import by.zharikov.myapplication.homework4.Homework4
@@ -21,7 +23,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         button2.setOnClickListener {
-            val intent = Intent(this, Homework2::class.java )
+            val intent = Intent(this, Homework2::class.java)
             startActivity(intent)
         }
         button3.setOnClickListener {
@@ -47,6 +49,12 @@ class MainActivity : AppCompatActivity() {
         button8.setOnClickListener {
             val intent = Intent(this, Homework8::class.java)
             startActivity(intent)
+        }
+        button11.setOnClickListener {
+            startActivity(Intent(this, Homework11::class.java))
+        }
+        button12.setOnClickListener {
+            startActivity(Intent(this, Homework12::class.java))
         }
     }
 }
