@@ -66,5 +66,9 @@
     <string name="homework_12">Homework 12</string>
     <string name="green">#00ff7f</string>
     <string name="red">#744e3b</string>
+    <string name="enter_the_number">Enter the number</string>
+    <string name="count">Count</string>
+    <string name="number_484941654894">484941654894</string>
+    <string name="number_wrong">Number entered incorrectly.</string>
 
 </resources>

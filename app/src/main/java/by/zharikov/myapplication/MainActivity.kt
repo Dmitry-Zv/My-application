@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import by.zharikov.myapplication.homework11.Homework11
+import by.zharikov.myapplication.homework12.Homework12
 import by.zharikov.myapplication.homework2.Homework2
 import by.zharikov.myapplication.homework3.Homework3
 import by.zharikov.myapplication.homework4.Homework4
@@ -51,6 +52,9 @@ class MainActivity : AppCompatActivity() {
         }
         button11.setOnClickListener {
             startActivity(Intent(this, Homework11::class.java))
+        }
+        button12.setOnClickListener {
+            startActivity(Intent(this, Homework12::class.java))
         }
     }
 }
