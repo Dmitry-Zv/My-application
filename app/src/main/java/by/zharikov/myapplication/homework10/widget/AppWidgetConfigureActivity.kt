@@ -6,6 +6,8 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
 import android.widget.EditText
 import by.zharikov.myapplication.R
 
@@ -15,6 +17,8 @@ import by.zharikov.myapplication.R
 class AppWidgetConfigureActivity : Activity() {
     private var appWidgetId = AppWidgetManager.INVALID_APPWIDGET_ID
     private lateinit var appWidgetText: EditText
+    private lateinit var autocompleteText: AutoCompleteTextView
+    private val arrayCity = arrayListOf("Minsk", "Moskow", "New York", "Tokio", "Paris")
     private var onClickListener = View.OnClickListener {
         val context = this@AppWidgetConfigureActivity
 
@@ -41,6 +45,10 @@ class AppWidgetConfigureActivity : Activity() {
         setResult(RESULT_CANCELED)
 
         setContentView(R.layout.app_widget_configure)
+
+        autocompleteText = findViewById<AutoCompleteTextView>(R.id.appwidget_text)
+        var adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, arrayCity)
+        autocompleteText.setAdapter(adapter)
         appWidgetText = findViewById<View>(R.id.appwidget_text) as EditText
         findViewById<View>(R.id.add_button).setOnClickListener(onClickListener)
 

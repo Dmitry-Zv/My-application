@@ -86,6 +86,6 @@ data class WeatherResponse(
         @SerializedName("deg")
         val deg: Int? = null,
         @SerializedName("speed")
-        val speed: Int? = null
+        val speed: Double? = null
     )
 }
